@@ -18,8 +18,10 @@
             alt="some image taking up entire left side"
           />
           <div class="image-sidebar">
-            <img class="logo" src="images/Infinity-Symbol.svg" alt="logo" />
-            Ewig
+            <div class="sidebar-content">
+              <img class="logo" src="images/Infinity-Symbol.svg" alt="logo" />
+              <p class="logo-text">Ewig</p>
+            </div>
           </div>
           <div class="attribution">
             <p>
@@ -39,7 +41,7 @@
       </div>
       <div class="right">
         <div class="hero">
-          <h1 class="hook">Thinking about cryogenics?</h1>
+          <h1>Thinking about cryogenics?</h1>
           <p class="subtext">
             This is only a mock form, not a real online service! Sign up now and
             live forever.
@@ -47,9 +49,9 @@
           </p>
         </div>
         <div class="form-container">
-          <h1>Los Geht's!</h1>
+          <h2>Sign up below!</h2>
           <form action="">
-            <label for="progress">Form Completion:</label>
+            <label class="labels" for="progress">Form Completion:</label>
             <progress id="completion" max="100" value="0"></progress>
             <label class="labels" for="first-name"> First Name:</label>
             <input
@@ -93,8 +95,10 @@
               for="password"
               type="password"
             />
-            <button class="submit" type="submit">Sign-Up!</button>
-            <button class="reset" type="reset">Reset Form</button>
+            <div class="buttons">
+              <button class="submit" type="submit">Sign-Up!</button>
+              <button class="reset" type="reset">Reset Form</button>
+            </div>
           </form>
           <div class="already-question">
             <p>Already have an account? <a href="">Log In</a></p>
@@ -108,7 +112,7 @@
           href="https://github.com/Alienatedlabor"
           target="_blank"
           rel="noopener noreferrer"
-          >Developed by Cole Heideman</a
+          >developed by Cole Heideman</a
         >
         <p>as part of</p>
         <a
