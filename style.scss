@@ -20,12 +20,14 @@ a {
   color: $red;
   transition: 0.2s;
   cursor: pointer;
+  text-decoration: none;
 }
 a:visited {
   color: $blue;
 }
 a:hover {
   color: #1d4ed8;
+  text-decoration: underline;
 }
 .container {
   display: flex;
