@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sign-Up!</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
   <body>
     <div class="container">
@@ -43,63 +43,75 @@
         <div class="hero">
           <h1>Thinking about cryogenics?</h1>
           <p class="subtext">
-            This is only a mock form, not a real online service! Sign up now and
-            live forever.
+            This is only a mock form, not a real online service! At Ewig, we
+            specialize in indefinite cryogenic freezes. Sign up now and live
+            forever.
             <span class="tagline">Embrace your Ewigkeit</span>
           </p>
         </div>
         <div class="form-container">
           <h2>Sign up below!</h2>
           <form action="">
-            <label class="labels" for="progress">Form Completion:</label>
-            <progress id="completion" max="100" value="0"></progress>
+            <!-- <label class="labels" for="progress">Form Completion:</label>
+            <progress id="completion" max="100" value="0"></progress> -->
             <label class="labels" for="first-name"> First Name:</label>
             <input
               placeholder="First Name"
-              aria-required="true"
+              required
               for="first-name"
               type="text"
             />
             <label class="labels" for="last-name">Last Name:</label>
             <input
               placeholder="Last Name"
-              aria-required="true"
+              required
               for="last-name"
               type="text"
             />
             <label class="labels" for="email"> Email:</label>
-            <input
-              placeholder="Email"
-              aria-required="true"
-              for="email"
-              type="email"
-            />
+            <input placeholder="Email" required for="email" type="email" />
             <label class="labels" for="phone"> Phone:</label>
             <input
               placeholder="Phone Number"
-              aria-required="true"
+              required
               for="phone"
               type="number"
             />
-            <label class="labels" for="password"> Password:</label>
+            <label minlength="5" class="labels" for="password">
+              Password:</label
+            >
             <input
+              title="Password must contain at least one letter and number and be a minimum of 8 characters"
               placeholder="Password"
-              aria-required="true"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
+              required
               for="password"
               type="password"
+              name="password"
+              onChange="onChange()"
             />
-            <label class="labels" for="password"> Confirm Password:</label>
+            <label class="labels error" for="password">
+              Confirm Password:</label
+            >
             <input
+              title="Password must contain at least one letter and number and be a minimum of 8 characters"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$"
               placeholder="Password"
-              aria-required="true"
+              required
               for="password"
               type="password"
+              name="confirm"
+              onChange="onChange()"
             />
             <div class="buttons">
               <button class="submit" type="submit">Sign-Up!</button>
               <button class="reset" type="reset">Reset Form</button>
             </div>
           </form>
+          <span class="validation-message">
+            Password must contain at least eight characters, one letter, and one
+            number.</span
+          >
           <div class="already-question">
             <p>Already have an account? <a href="">Log In</a></p>
           </div>

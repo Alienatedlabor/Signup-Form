@@ -89,6 +89,10 @@ a:hover {
           padding: 8px 30px;
           border: none;
           border-radius: 3px;
+          text-align: center;
+        }
+        input:invalid {
+          outline: 3px solid $red;
         }
         input:focus {
           outline: 3px solid #1d4ed8;
@@ -175,4 +179,7 @@ button {
 }
 button:active {
   box-shadow: none;
+}
+.error {
+  outline: 3px solid $red;
 }

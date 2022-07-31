@@ -99,6 +99,7 @@ a:hover {
   padding: 8px 30px;
   border: none;
   border-radius: 3px;
+  text-align: center;
 }
 .container .right .form-container form input:focus {
   outline: 3px solid #1d4ed8;
